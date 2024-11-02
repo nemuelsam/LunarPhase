@@ -12,32 +12,32 @@ class GUI implements ActionListener
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
-        ImageIcon bgIcon=new ImageIcon ("sky.jpg");
-        JLabel bgLabel= new JLabel(bgIcon);
-        bgLabel.setBounds(0,0,500,500);
+        //ImageIcon bgIcon=new ImageIcon ("sky.jpg");
+        //JLabel bgLabel= new JLabel(bgIcon);
+        //bgLabel.setBounds(0,0,500,500);
 
 
         JLabel ld,lm,ly;
         ld=new JLabel("Day");
         lm=new JLabel("Month");
         ly=new JLabel("Year");
-        ld.setBounds(20,30,40,30);
-        lm.setBounds(70,30,40,30);
-        ly.setBounds(120,30,40,30);
+        ld.setBounds(800,30,50,50);
+        lm.setBounds(860,30,50,50);
+        ly.setBounds(920,30,50,50);
 
         tday=new JTextField();
         tmonth=new JTextField();
         tyear=new JTextField();
-        tday.setBounds(20,60,40,30);
-        tmonth.setBounds(70,60,40,30);
-        tyear.setBounds(120,60,40,30);
+        tday.setBounds(800,60,50,50);
+        tmonth.setBounds(860,60,50,50);
+        tyear.setBounds(920,60,50,50);
 
         ImageIcon icon=new ImageIcon("Moon button.jpg");
         JButton button=new JButton(icon);
-        button.setBounds(180,60,25,25);
+        button.setBounds(980,60,50,50);
         button.addActionListener(this);
         
-        frame.add(bgLabel);
+        //frame.add(bgLabel);
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
