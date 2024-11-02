@@ -12,6 +12,11 @@ class GUI implements ActionListener
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
+        ImageIcon bgIcon=new ImageIcon ("sky.jpg");
+        JLabel bgLabel= new JLabel(bgIcon);
+        bgLabel.setBounds(0,0,500,500);
+
+
         JLabel ld,lm,ly;
         ld=new JLabel("Day");
         lm=new JLabel("Month");
@@ -32,7 +37,7 @@ class GUI implements ActionListener
         button.setBounds(180,60,25,25);
         button.addActionListener(this);
         
-
+        frame.add(bgLabel);
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
