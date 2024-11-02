@@ -4,92 +4,60 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: SNARC
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Nemuel Sam Jerry - College of Engineering Chengannur
+- Member 2: Niranjan K - College of Engineering Chengannur
 
 ### Project Description
-[2-3 lines about what your project does]
+We take a date as an input from the user and display the phase of the moon on that particular date using the mathematical algorithms involving the lunar cycle.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+People trying to find the phase of the moon in the far future and as well as in the past.For example trying to find the phase of the moon in 1801 or 2999.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+An algorithm that calculates the phase of the moon using a reference new moon date and lunarcycle length.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- languages-Java
+- framework-Swing,AWT,util
+- libraries-java.util,jawa.swing,java.awt,java.awt.event
+- tools-Visual Studio Code,GitHub,GitHub Desktop,Pinterest
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+javac LunarPhase.java
 
 # Run
-[commands]
+java LunarPhase
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+!Screenshot\Screenshot1.png
+Image shows that the moon phase on 19-03-2005 is First Quarter
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+!Screenshot\Screenshot2.png
+Image shows that the moon phase on 23-07-2020 is Waxing Crescent
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+!Screenshot\Screenshot3.png
+Image shows that the moon phase on 13-01-2100 is Waxing Crescent
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+!Diagram\workflowdiagram.jpg
+Shows the workflow of the program
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Nemuel Sam Jerry: Moon phase calculating algorithm and basic GUI development
+- Niranjan K: Advanced GUI development plans,Images for the phases of moon,Information for the program
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
