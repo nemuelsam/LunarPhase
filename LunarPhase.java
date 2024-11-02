@@ -49,7 +49,38 @@ class GUI implements ActionListener
         String syear=tyear.getText();
         Calendar cdate=Calendar.getInstance();
         cdate.set(Integer.parseInt(syear),Integer.parseInt(smonth)-1,Integer.parseInt(sday));
-        System.out.println(cdate.getTime());
+        
+        Calendar rdate=Calendar.getInstance();
+        if(cdate.get(Calendar.YEAR)>=2000 && cdate.get(Calendar.YEAR)<=2999);
+        {
+            rdate.set(2000,0,6);
+        }
+        else if(cdate.get(Calendar.YEAR)>=1900 && cdate.get(Calendar.YEAR)<=1999)
+        {
+            rdate.set(1900,10,6);
+        }
+        else if(cdate.get(Calendar.YEAR)>=3000 && cdate.get(Calendar.YEAR)<=3999)
+        {
+            rdate.set(3000,0,27);
+        }
+        else if(cdate.get(Calendar.YEAR)>=1800 && cdate.get(Calendar.YEAR)<=1899)
+        {
+            rdate.set(3000,0,27);
+        }
+        long refmilli=rdate.getTimeInMillis();
+        long chkmilli=cdate.getTimeinMillis();
+        long difmilli=chkmilli-refmilli;
+        long difdays=difmilli/(1000*60*60*24);
+
+        float lunarcycle_d=29;
+        float lunarcycle_h=12;
+        float lunarcycle_m=44;
+        float lunarcycle_s=2;
+
+        float lunarcycle_td=(lunarcycle_d)+(lunarcycle_h/24)+(lunarcycle_m/(60*24))+(lunarcycle_s/(60*60*24));
+
+        int illum=difdays%
+
     }
 }
 class LunarPhase
