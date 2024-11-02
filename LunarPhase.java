@@ -28,12 +28,21 @@ class GUI implements ActionListener
         tday=new JTextField();
         tmonth=new JTextField();
         tyear=new JTextField();
+
+        tday.setFont(new Font("Arial", Font.PLAIN, 25));
+        tmonth.setFont(new Font("Arial", Font.PLAIN, 25));
+        tyear.setFont(new Font("Arial", Font.PLAIN, 25));
+
+        tday.setHorizontalAlignment(JTextField.CENTER);
+        tmonth.setHorizontalAlignment(JTextField.CENTER);
+        tyear.setHorizontalAlignment(JTextField.CENTER);
+
         tday.setBounds(500,60,100,50);
         tmonth.setBounds(660,60,100,50);
         tyear.setBounds(820,60,100,50);
 
         moonpic=new JLabel();
-        moonpic.setBounds(400,150,736,736);
+        moonpic.setBounds(400,100,736,736);
 
         ImageIcon icon=new ImageIcon("Moon button.jpg");
         JButton button=new JButton(icon);
