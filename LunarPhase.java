@@ -47,6 +47,9 @@ class GUI implements ActionListener
         String sday=tday.getText();
         String smonth=tmonth.getText();
         String syear=tyear.getText();
+        Calendar cdate=Calendar.getInstance();
+        cdate.set(Integer.parseInt(syear),Integer.parseInt(smonth)-1,Integer.parseInt(sday));
+        System.out.println(cdate.getTime());
     }
 }
 class LunarPhase
