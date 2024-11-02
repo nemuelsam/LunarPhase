@@ -16,19 +16,19 @@ class GUI implements ActionListener
         ld=new JLabel("Day");
         lm=new JLabel("Month");
         ly=new JLabel("Year");
-        ld.setBounds(20,30,20,20);
-        lm.setBounds(50,30,20,20);
-        ly.setBounds(80,30,20,20);
+        ld.setBounds(20,30,40,30);
+        lm.setBounds(70,30,40,30);
+        ly.setBounds(120,30,40,30);
 
         tday=new JTextField();
         tmonth=new JTextField();
         tyear=new JTextField();
-        tday.setBounds(20,60,20,20);
-        tmonth.setBounds(50,60,20,20);
-        tyear.setBounds(80,60,20,20);
+        tday.setBounds(20,60,40,30);
+        tmonth.setBounds(70,60,40,30);
+        tyear.setBounds(120,60,40,30);
 
         JButton button=new JButton();
-        button.setBounds(120,60,20,20);
+        button.setBounds(180,60,25,25);
         button.addActionListener(this);
 
         frame.add(ld);frame.add(lm);frame.add(ly);
@@ -40,7 +40,13 @@ class GUI implements ActionListener
     }
     public void actionPerformed(ActionEvent ae)
     {
-        System.out.println("Clicked");
+        LunarIllumination();
+    }
+    void LunarIllumination()
+    {
+        String sday=tday.getText();
+        String smonth=tmonth.getText();
+        String syear=tyear.getText();
     }
 }
 class LunarPhase
