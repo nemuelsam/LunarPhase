@@ -33,7 +33,7 @@ class GUI implements ActionListener
         tyear.setBounds(925,60,50,50);
 
         moonpic=new JLabel();
-        moonpic.setBounds(800,200,300,200);
+        moonpic.setBounds(600,150,736,736);
 
         ImageIcon icon=new ImageIcon("Moon button.jpg");
         JButton button=new JButton(icon);
@@ -43,6 +43,7 @@ class GUI implements ActionListener
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
+        frame.add(moonpic);
         
         frame.setVisible(true);
 
@@ -110,37 +111,44 @@ class GUI implements ActionListener
         }
         else if(illump<90)
         {
-            ImageIcon moon=new ImageIcon("Waxing Crescent.jpeg");
+            moonpic.setPreferredSize(new Dimension(736,736));
+            ImageIcon moon=new ImageIcon("Waxing crescent.jpg");
             moonpic.setIcon(moon);
         }
         else if(illump<135)
         {
-            ImageIcon moon=new ImageIcon("First Quarter.jpeg");
+            moonpic.setPreferredSize(new Dimension(735,1109));
+            ImageIcon moon=new ImageIcon("First quarter.jpg");
             moonpic.setIcon(moon);
         }
         else if(illump<180)
         {
-            ImageIcon moon=new ImageIcon("Waxing Gibbous.jpeg");
+            moonpic.setPreferredSize(new Dimension(600,640));
+            ImageIcon moon=new ImageIcon("Waxing Gibbous.jpg");
             moonpic.setIcon(moon);
         }
         else if(illump<225)
         {
-            ImageIcon moon=new ImageIcon("Full moon.jpeg");
+            moonpic.setPreferredSize(new Dimension(735,952));
+            ImageIcon moon=new ImageIcon("Full Moon.jpg");
             moonpic.setIcon(moon);
         }
         else if(illump<270)
         {
-            ImageIcon moon=new ImageIcon("Waning gibbous.jpeg");
+            moonpic.setPreferredSize(new Dimension(736,883));
+            ImageIcon moon=new ImageIcon("Waning Gibbous.jpg");
             moonpic.setIcon(moon);
         }
         else if(illump<315)
         {
-            ImageIcon moon=new ImageIcon("Last quarter.jpeg");
+            moonpic.setPreferredSize(new Dimension(736,490));
+            ImageIcon moon=new ImageIcon("Last Quarter.jpg");
             moonpic.setIcon(moon);
         }
         else
         {
-            ImageIcon moon=new ImageIcon("Waning cresent.jpeg");
+            moonpic.setPreferredSize(new Dimension(736,791));
+            ImageIcon moon=new ImageIcon("Waning Crescent.jpg");
             moonpic.setIcon(moon);
         }
     }
