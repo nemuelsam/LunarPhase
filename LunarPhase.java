@@ -2,42 +2,44 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import javax.swing.border.Border;
 class GUI implements ActionListener
 {
     JTextField tday,tmonth,tyear;
+    JLabel moonpic;
+    
     public GUI()
     {
         JFrame frame=new JFrame("LUNAR PHASE");
-        frame.setSize(500,500);
+        frame.setSize(1920,1280);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
-        //ImageIcon bgIcon=new ImageIcon ("sky.jpg");
-        //JLabel bgLabel= new JLabel(bgIcon);
-        //bgLabel.setBounds(0,0,500,500);
-
+        frame.getContentPane().setBackground(Color.BLACK);
 
         JLabel ld,lm,ly;
-        ld=new JLabel("Day");
-        lm=new JLabel("Month");
-        ly=new JLabel("Year");
-        ld.setBounds(800,30,50,50);
-        lm.setBounds(860,30,50,50);
-        ly.setBounds(920,30,50,50);
+        ld=new JLabel("<html><font size='5' color=white>Day</font></html>");
+        lm=new JLabel("<html><font size='5' color=white>Month</font></html>");
+        ly=new JLabel("<html><font size='5' color=white>Year</font></html>");
+        ld.setBounds(800,25,50,50);
+        lm.setBounds(860,25,55,50);
+        ly.setBounds(920,25,50,50);
 
         tday=new JTextField();
         tmonth=new JTextField();
         tyear=new JTextField();
         tday.setBounds(800,60,50,50);
-        tmonth.setBounds(860,60,50,50);
-        tyear.setBounds(920,60,50,50);
+        tmonth.setBounds(865,60,50,50);
+        tyear.setBounds(925,60,50,50);
+
+        moonpic=new JLabel();
+        moonpic.setBounds(800,200,300,200);
 
         ImageIcon icon=new ImageIcon("Moon button.jpg");
         JButton button=new JButton(icon);
         button.setBounds(980,60,50,50);
         button.addActionListener(this);
         
-        //frame.add(bgLabel);
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
@@ -48,7 +50,7 @@ class GUI implements ActionListener
     public void actionPerformed(ActionEvent ae)
     {
         double illump=LunarIllumination();
-        System.out.println(illump);
+        Moonphase(illump);
     }
     double LunarIllumination()
     {
@@ -98,6 +100,49 @@ class GUI implements ActionListener
         double illumpercent=illum*360;
 
         return illumpercent;
+    }
+    void Moonphase(double illump)
+    {
+
+        if(illump<1 || illump>359)
+        {
+            moonpic.setText("<html><font size='5' color=white>OOPS ITS A NEW MOON</font></html>");
+        }
+        else if(illump<90)
+        {
+            ImageIcon moon=new ImageIcon("Waxing Crescent.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else if(illump<135)
+        {
+            ImageIcon moon=new ImageIcon("First Quarter.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else if(illump<180)
+        {
+            ImageIcon moon=new ImageIcon("Waxing Gibbous.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else if(illump<225)
+        {
+            ImageIcon moon=new ImageIcon("Full moon.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else if(illump<270)
+        {
+            ImageIcon moon=new ImageIcon("Waning gibbous.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else if(illump<315)
+        {
+            ImageIcon moon=new ImageIcon("Last quarter.jpeg");
+            moonpic.setIcon(moon);
+        }
+        else
+        {
+            ImageIcon moon=new ImageIcon("Waning cresent.jpeg");
+            moonpic.setIcon(moon);
+        }
     }
 }
 class LunarPhase
