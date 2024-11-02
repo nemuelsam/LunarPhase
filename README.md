@@ -41,17 +41,17 @@ java LunarPhase
 For Software:
 
 # Screenshots (Add at least 3)
-!Screenshot\Screenshot1.png
+Screenshot\Screenshot1.png
 Image shows that the moon phase on 19-03-2005 is First Quarter
 
-!Screenshot\Screenshot2.png
+Screenshot\Screenshot2.png
 Image shows that the moon phase on 23-07-2020 is Waxing Crescent
 
-!Screenshot\Screenshot3.png
+Screenshot\Screenshot3.png
 Image shows that the moon phase on 13-01-2100 is Waxing Crescent
 
 # Diagrams
-!Diagram\workflowdiagram.jpg
+Diagram\workflowdiagram.jpg
 Shows the workflow of the program
 
 
