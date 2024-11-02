@@ -40,9 +40,10 @@ class GUI implements ActionListener
     }
     public void actionPerformed(ActionEvent ae)
     {
-        LunarIllumination();
+        float illump=LunarIllumination();
+        System.out.println(illump);
     }
-    void LunarIllumination()
+    float LunarIllumination()
     {
         String sday=tday.getText();
         String smonth=tmonth.getText();
@@ -51,7 +52,7 @@ class GUI implements ActionListener
         cdate.set(Integer.parseInt(syear),Integer.parseInt(smonth)-1,Integer.parseInt(sday));
         
         Calendar rdate=Calendar.getInstance();
-        if(cdate.get(Calendar.YEAR)>=2000 && cdate.get(Calendar.YEAR)<=2999);
+        if(cdate.get(Calendar.YEAR)>=2000 && cdate.get(Calendar.YEAR)<=2999)
         {
             rdate.set(2000,0,6);
         }
@@ -79,8 +80,10 @@ class GUI implements ActionListener
 
         float lunarcycle_td=(lunarcycle_d)+(lunarcycle_h/24)+(lunarcycle_m/(60*24))+(lunarcycle_s/(60*60*24));
 
-        int illum=difdays%
+        float illum=(difdays%lunarcycle_td)/lunarcycle_td;
+        float illumpercent=illum*360;
 
+        return illumpercent;
     }
 }
 class LunarPhase
