@@ -48,7 +48,7 @@ class GUI implements ActionListener
         JButton button=new JButton(icon);
         button.setBounds(980,60,50,50);
         button.addActionListener(this);
-        
+
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
