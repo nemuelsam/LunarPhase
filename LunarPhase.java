@@ -7,7 +7,7 @@ class GUI implements ActionListener
 {
     JTextField tday,tmonth,tyear;
     JLabel moonpic;
-    
+    JLabel info=new JLabel();
     public GUI()
     {
         JFrame frame=new JFrame("LUNAR PHASE");
@@ -49,10 +49,13 @@ class GUI implements ActionListener
         button.setBounds(980,60,50,50);
         button.addActionListener(this);
 
+        info.setBounds(10,100,400,800);
+
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
         frame.add(button);
         frame.add(moonpic);
+        frame.add(info);
         
         frame.setVisible(true);
 
@@ -117,48 +120,56 @@ class GUI implements ActionListener
         if(illump<1 || illump>359)
         {
             moonpic.setText("<html><font size='5' color=white>OOPS ITS A NEW MOON</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:NewMoon is moon which is \"new\",not old.\"Old\" moon is not new moon,but \"Old\" moon does not exist</font></html>");
         }
         else if(illump<90)
         {
             moonpic.setPreferredSize(new Dimension(736,736));
             ImageIcon moon=new ImageIcon("Waxing crescent.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Waxing crescent is the result when we google \"waxing crescent moon\".</font></html>");
         }
         else if(illump<135)
         {
             moonpic.setPreferredSize(new Dimension(735,1109));
             ImageIcon moon=new ImageIcon("First quarter.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
         }
         else if(illump<180)
         {
             moonpic.setPreferredSize(new Dimension(600,640));
             ImageIcon moon=new ImageIcon("Waxing Gibbous.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
         }
         else if(illump<225)
         {
             moonpic.setPreferredSize(new Dimension(735,952));
             ImageIcon moon=new ImageIcon("Full Moon.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:FullMoon is fully moon but not half.HalfMoon can never be full moon.</font></html>");
         }
         else if(illump<270)
         {
             moonpic.setPreferredSize(new Dimension(736,883));
             ImageIcon moon=new ImageIcon("Waning Gibbous.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
         }
         else if(illump<315)
         {
             moonpic.setPreferredSize(new Dimension(736,490));
             ImageIcon moon=new ImageIcon("Last Quarter.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
         }
         else
         {
             moonpic.setPreferredSize(new Dimension(736,791));
             ImageIcon moon=new ImageIcon("Waning Crescent.jpg");
             moonpic.setIcon(moon);
+            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
         }
     }
 }
