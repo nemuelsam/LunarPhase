@@ -135,14 +135,14 @@ class GUI implements ActionListener
             moonpic.setPreferredSize(new Dimension(735,1109));
             ImageIcon moon=new ImageIcon("First quarter.jpg");
             moonpic.setIcon(moon);
-            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:This phase of the Moon is also known as a Half Moon because only half of the Moon is visible. Because the Earth, Moon, & Sun are at a right angle instead of a straight line, and the Moon and Sun pull in different directions, the First Quarter phase has the smallest effect on the ocean's tides.</font></html>");
         }
         else if(cillump>=135 && cillump<180)
         {
             moonpic.setPreferredSize(new Dimension(600,640));
             ImageIcon moon=new ImageIcon("Waxing Gibbous.jpg");
             moonpic.setIcon(moon);
-            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:A waxing gibbous moon is a phase of the moon that occurs when the moon is more than half full but not yet fully illuminated.</font></html>");
         }
         else if(cillump>=180 && cillump<225)
         {
@@ -156,21 +156,21 @@ class GUI implements ActionListener
             moonpic.setPreferredSize(new Dimension(736,883));
             ImageIcon moon=new ImageIcon("Waning Gibbous.jpg");
             moonpic.setIcon(moon);
-            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:A waning gibbous moon can surprise you if you happen to be out late in the evening and you catch it rising eerily, some hours after sunset. It’ll be glowing red like a misshapen full moon when it’s near the horizon.</font></html>");
         }
         else if(cillump>=270 && cillump<315)
         {
             moonpic.setPreferredSize(new Dimension(736,490));
             ImageIcon moon=new ImageIcon("Last Quarter.jpg");
             moonpic.setIcon(moon);
-            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:The moon has moved another quarter of the way around Earth, to the third quarter position. The sun's light is now shining on the other half of the visible face of the moon.</font></html>");
         }
         else if(cillump>=315 && cillump<=350)
         {
             moonpic.setPreferredSize(new Dimension(736,791));
             ImageIcon moon=new ImageIcon("Waning Crescent.jpg");
             moonpic.setIcon(moon);
-            info.setText("<html><font size='3' color=white>Fun Fact:Testing</font></html>");
+            info.setText("<html><font size='3' color=white>Fun Fact:The moon appears as a crescent shape because we can only see a small sliver of the illuminated half. The term \"waning\" means decreasing, which is why this phase is called a waning crescent</font></html>");
         }
     }
 }
