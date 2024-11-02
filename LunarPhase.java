@@ -27,9 +27,11 @@ class GUI implements ActionListener
         tmonth.setBounds(70,60,40,30);
         tyear.setBounds(120,60,40,30);
 
-        JButton button=new JButton();
+        ImageIcon icon=new ImageIcon("Moon button.jpg");
+        JButton button=new JButton(icon);
         button.setBounds(180,60,25,25);
         button.addActionListener(this);
+        
 
         frame.add(ld);frame.add(lm);frame.add(ly);
         frame.add(tday);frame.add(tmonth);frame.add(tyear);
@@ -40,10 +42,10 @@ class GUI implements ActionListener
     }
     public void actionPerformed(ActionEvent ae)
     {
-        float illump=LunarIllumination();
+        double illump=LunarIllumination();
         System.out.println(illump);
     }
-    float LunarIllumination()
+    double LunarIllumination()
     {
         String sday=tday.getText();
         String smonth=tmonth.getText();
@@ -55,33 +57,40 @@ class GUI implements ActionListener
         if(cdate.get(Calendar.YEAR)>=2000 && cdate.get(Calendar.YEAR)<=2999)
         {
             rdate.set(2000,0,6);
+            rdate.set(Calendar.HOUR,18);
+            rdate.set(Calendar.MINUTE,14);
         }
         else if(cdate.get(Calendar.YEAR)>=1900 && cdate.get(Calendar.YEAR)<=1999)
         {
-            rdate.set(1900,10,6);
+            rdate.set(1901,0,20);
+            rdate.set(Calendar.HOUR,14);
+            rdate.set(Calendar.MINUTE,36);
         }
         else if(cdate.get(Calendar.YEAR)>=3000 && cdate.get(Calendar.YEAR)<=3999)
         {
             rdate.set(3000,0,27);
+            rdate.set(Calendar.HOUR,18);
+            rdate.set(Calendar.MINUTE,14);
         }
         else if(cdate.get(Calendar.YEAR)>=1800 && cdate.get(Calendar.YEAR)<=1899)
         {
-            rdate.set(3000,0,27);
+            rdate.set(1801,0,14);
+            rdate.set(Calendar.HOUR,16);
+            rdate.set(Calendar.MINUTE,34);
         }
         long refmilli=rdate.getTimeInMillis();
-        long chkmilli=cdate.getTimeinMillis();
+        long chkmilli=cdate.getTimeInMillis();
         long difmilli=chkmilli-refmilli;
-        long difdays=difmilli/(1000*60*60*24);
+        double difdays=(double)difmilli/(double)(1000*60*60*24);
 
-        float lunarcycle_d=29;
-        float lunarcycle_h=12;
-        float lunarcycle_m=44;
-        float lunarcycle_s=2;
+        double lunarcycle_d=29;
+        double lunarcycle_h=12;
+        double lunarcycle_m=44;
+        double lunarcycle_s=2;
 
-        float lunarcycle_td=(lunarcycle_d)+(lunarcycle_h/24)+(lunarcycle_m/(60*24))+(lunarcycle_s/(60*60*24));
 
-        float illum=(difdays%lunarcycle_td)/lunarcycle_td;
-        float illumpercent=illum*360;
+        double illum=(difdays%lunarcycle_d)/lunarcycle_d;
+        double illumpercent=illum*360;
 
         return illumpercent;
     }
