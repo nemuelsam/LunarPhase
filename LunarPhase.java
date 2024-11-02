@@ -21,19 +21,19 @@ class GUI implements ActionListener
         ld=new JLabel("<html><font size='5' color=white>Day</font></html>");
         lm=new JLabel("<html><font size='5' color=white>Month</font></html>");
         ly=new JLabel("<html><font size='5' color=white>Year</font></html>");
-        ld.setBounds(800,25,50,50);
-        lm.setBounds(860,25,55,50);
-        ly.setBounds(920,25,50,50);
+        ld.setBounds(500,25,100,50);
+        lm.setBounds(660,25,100,50);
+        ly.setBounds(820,25,100,50);
 
         tday=new JTextField();
         tmonth=new JTextField();
         tyear=new JTextField();
-        tday.setBounds(800,60,50,50);
-        tmonth.setBounds(865,60,50,50);
-        tyear.setBounds(925,60,50,50);
+        tday.setBounds(500,60,100,50);
+        tmonth.setBounds(660,60,100,50);
+        tyear.setBounds(820,60,100,50);
 
         moonpic=new JLabel();
-        moonpic.setBounds(600,150,736,736);
+        moonpic.setBounds(400,150,736,736);
 
         ImageIcon icon=new ImageIcon("Moon button.jpg");
         JButton button=new JButton(icon);
